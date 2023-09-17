@@ -29,12 +29,12 @@ nav a {
   border: solid 1px #aaa;
   text-align: center;
   text-decoration: none;
-  color: #555;
+  color: #aa13aa;
 }
 
 nav a[aria-current='page'] {
   color: #000;
-  background-color: #d4d4d4;
+  background-color: #eb88ff;
 }
 
 main {
@@ -64,8 +64,10 @@ header {
 footer {
   text-align: center;
   color: #aa99aa;
+  background-color: ffeeff;
 }
 
 main {
   background: #ffeeff;
 }
+

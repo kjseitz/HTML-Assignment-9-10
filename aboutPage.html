@@ -26,8 +26,6 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">Navbar</a>
-
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item active">
@@ -41,22 +39,9 @@
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="contactPage.html"
-              >Contanct Info</a
-            >
+            <a class="nav-link" href="contactPage.html">Contanct Info</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input
-            class="form-control mr-sm-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-            Search
-          </button>
-        </form>
       </div>
     </nav>
     <main>
@@ -90,24 +75,30 @@
       </section>
       <section>
         <h2>Student Organizations</h2>
-        <table>
-          <tr>
-            <th>Org</th>
-            <th>Years Involved</th>
-            <th>Membership Status</th>
-          </tr>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Organization</th>
+              <th scope="col">Years Involved</th>
+              <th scope="col">Membership Status</th>
+            </tr>
+          </thead>
           <tbody>
             <tr>
+              <th scope="row">1</th>
               <td>Phi Eta Sigma</td>
               <td>3</td>
               <td>Member</td>
             </tr>
             <tr>
+              <th scope="row">2</th>
               <td>Computer Science Club</td>
               <td>1</td>
               <td>Vice President</td>
             </tr>
             <tr>
+              <th scope="row">3</th>
               <td>Women @ Work</td>
               <td>1</td>
               <td>Member</td>

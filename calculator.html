@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script type="module" src="script.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Me!</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="index.html"
+              >Home Page</a>
+            <a class="nav-link" href="aboutPage.html">About Me</a>
+            <a class="nav-link" href="contactPage.html">Contact Info</a>
+            <a class="nav-link active" href="contactPage.html">Calculator</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <header>
+        <h1>Calculator</h1>
+      </header>
+      <form>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <label id="revenues">Enter Revenue: </label>
+              <input id="revenue" type="text" placeholder="Revenue" />
+            </div>
+            <div class="col-sm">
+              <label id="expenses">Enter Expenses: </label>
+              <input id="expense" type="text" placeholder="Expenses" />
+            </div>
+            <div class="col-sm">
+              <label id="investments">Enter Investment: </label>
+              <input id="investment" type="text" placeholder="Investment" />
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-dark" id="calculate">Enter</button>
+        <br/>
+        <p id="answer">ROI: </p>
+        <p id="percent">%: </p>
+      </form>
+    </main>
+    <script>
+    $(document).ready(function(){ 
+      $("form").submit(function (){
+        event.preventDefault();
+        let revenue = parseFloat($("#revenue").val());
+          let expense = parseFloat($("#expense").val());
+          let investment = parseFloat($("#investment").val());
+      
+        let roi = ((revenue-expense)/investment);
+        let roiPercent = roi*100;
+        $("#answer").text("ROI: " + roi.toFixed(2));
+        $("#percent").text("ROI: " + roiPercent.toFixed(2) + "%");
+      });
+    });
+  </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

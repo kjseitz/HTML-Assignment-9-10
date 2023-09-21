@@ -5,38 +5,77 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
     <script type="module" src="script.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
   </head>
   <body>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/aboutPage.html" aria-current="page">About Page</a>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Me!</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="index.html"
+            >Home Page</a>
+          <a class="nav-link" href="aboutPage.html">About Me</a>
+          <a class="nav-link active" href="contactPage.html">Contact Info</a>
+          <a class="nav-link" href="contactPage.html">Calculator</a>
+          </div>
+        </div>
+      </div>
     </nav>
     <main>
       <h1>Contact Page</h1>
-      <table>
+      <table class="table table-striped">
         <thead>
-          <h3>Contact Information</h3>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Method</th>
+            <th scope="col">Information</th>
+          </tr>
         </thead>
-        <tr>
-          <th>Method</th>
-          <th>Information</th>
-        </tr>
         <tbody>
           <tr>
+            <th scope="row">1</th>
             <td>Phone Number</td>
             <td>913-744-5332</td>
           </tr>
           <tr>
+            <th scope="row">2</th>
             <td>School Email</td>
             <td>kjseitz@gus.pittstate.edu</td>
           </tr>
           <tr>
+            <th scope="row">3</th>
             <td>Personal Email</td>
             <td>kseitz14@gmail.com</td>
           </tr>
         </tbody>
       </table>
     </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

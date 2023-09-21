@@ -50,26 +50,27 @@
         <h1>Calculator</h1>
       </header>
       <form>
-        <label id="revenue">Enter Revenue: </label>
+        <label id="revenues">Enter Revenue: </label>
         <input id="revenue" type="text" placeholder="Revenue" />
         <label id="expenses">Enter Expenses: </label>
         <input id="expense" type="text" placeholder="Expenses" />
-        <label id="investment">Enter Investment: </label>
+        <label id="investments">Enter Investment: </label>
         <input id="investment" type="text" placeholder="Investment" />
         <br />
         <button class="btn button" id="calculate">Enter</button>
         <br/>
-        <p id="answer"></p>
+        <p id="answer">ROI: </p>
       </form>
     </main>
     <script>
     $(document).ready(function(){ 
-      $("#calculate").click(function (){
+      $("form").submit(function (){
+        event.preventDefault();
         let revenue = parseFloat($("#revenue").val());
-          let expense = parseFloat($("#expenses").val());
+          let expense = parseFloat($("#expense").val());
           let investment = parseFloat($("#investment").val());
       
-        let roi = ((revenue-expenses)/investment) * 100;
+        let roi = ((revenue-expense)/investment) * 100;
         $("#answer").text("ROI: " + roi.toFixed(2) + "%");
       });
     });

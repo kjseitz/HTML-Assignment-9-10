@@ -50,14 +50,23 @@
         <h1>Calculator</h1>
       </header>
       <form>
-        <label id="revenues">Enter Revenue: </label>
-        <input id="revenue" type="text" placeholder="Revenue" />
-        <label id="expenses">Enter Expenses: </label>
-        <input id="expense" type="text" placeholder="Expenses" />
-        <label id="investments">Enter Investment: </label>
-        <input id="investment" type="text" placeholder="Investment" />
-        <br />
-        <button class="btn button" id="calculate">Enter</button>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <label id="revenues">Enter Revenue: </label>
+              <input id="revenue" type="text" placeholder="Revenue" />
+            </div>
+            <div class="col-sm">
+              <label id="expenses">Enter Expenses: </label>
+              <input id="expense" type="text" placeholder="Expenses" />
+            </div>
+            <div class="col-sm">
+              <label id="investments">Enter Investment: </label>
+              <input id="investment" type="text" placeholder="Investment" />
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-dark" id="calculate">Enter</button>
         <br/>
         <p id="answer">ROI: </p>
       </form>
